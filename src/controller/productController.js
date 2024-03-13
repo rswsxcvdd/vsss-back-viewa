@@ -11,7 +11,6 @@ const path = require("path")
 require("dotenv").config();
 
 const getCertificateListBY_ID = [
-    body("certificate_user_id").isLength({ min: 1, max: 100 }).trim().withMessage("certificate_user_id must be specified."),
     async (req, res) => {
         try {
             let request = req?.body;
@@ -79,6 +78,7 @@ const getCertificateListBY_ID = [
                 );
             }
         } catch (err) {
+            console.log(err,"err0-----------------------1")
             return apiResponse.mainResponse(
                 res,
                 "failed",

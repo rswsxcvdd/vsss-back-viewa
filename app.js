@@ -3,10 +3,12 @@ require("dotenv").config();
 const cors = require("cors");
 const path = require("path");
 const bodyParser = require('body-parser');
-const erpRoute = require("../src/routes/apiRoute");
+//const erpRoute = require("../src/routes/apiRoute");
+const erpRoute = require("./src/routes/apiRoute");
 
 // import database 
-const connect = require("../src/config/connect");
+//const connect = require("../src/config/connect");
+const connect = require("./src/config/connect");
 
 const app = express();
 app.locals.moment = require('moment');
