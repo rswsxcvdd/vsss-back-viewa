@@ -1,13 +1,6 @@
-const Usejr = require("../models/master_erp_user");
+
 const apiResponse = require("../helper/apiResponse");
-const { body, validationResult } = require("express-validator");
 const productService = require("../servicess/product.service");
-const token_service = require("../middleware/token");
-const { qr_code_generator, barcode_generator } = require("../helper/qr-barcode");
-const { uploadPDF } = require("../helper/cloudinary");
-const html_to_pdf = require("html-pdf-node");
-const ejs = require("ejs");
-const path = require("path")
 require("dotenv").config();
 
 const getCertificateListBY_ID = [
